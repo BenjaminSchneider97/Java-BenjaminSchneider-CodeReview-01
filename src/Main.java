@@ -77,7 +77,14 @@ public class Main {
         }
 
         //Bonus 2
+        System.out.println("\nBonus 2");
 
+        if(args.length == 2){
+            int argWidth = Integer.parseInt(args[0]);
+            int argHeight = Integer.parseInt(args[1]);
+            String argArea = calcRectArea(argWidth, argHeight);
 
+            System.out.println(argArea);
+        }
     }
 }
