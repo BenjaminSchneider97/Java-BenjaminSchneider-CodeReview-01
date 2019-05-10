@@ -1,69 +1,83 @@
 public class Main {
 
-    public static String calcRectArea(/* int a, int b*/){
-
-        /*
+    private static String calcRectArea(int width, int height) {
         //calculates the area of a rectangle
-        int area = a*b;
-
-        //the output you see in the console with the calculated area
-        String result = "The area of the rectangle is: " + area + "cm².";
-        */
-
-        //the arrays with the width and height values
-        int[] widths = {20, 40, 10, 70};
-        int[] heights = {30, 50, 10, 100};
-
-        //define the variables once in the beginning to be able to access them later
-        int area2 = 0;
-        String result2 = "";
-
-        for (int i =0; i < widths.length; i++){
-            area2 = widths[i]*heights[i];
-
-            //the output you see in the console with the calculated area
-            result2 += "The area of the rectangle is: " + area2 + "cm².\n";
-
-        }
-
-        //returns the result
-        return result2;
+        return "The area of the rectangle is: " + width * height + "cm²";
     }
 
-    public static String calcSquareArea(int a){
-
+    private static String calcSquareArea(int width) {
         //calculates the area of a square
-        double area = Math.pow(a, 2.0);
-
-        //takes the number a times four for the boundary
-        int perimeter = a*4;
-
-        //the output you see in the console with the calculated area and the perimeter
-        String result = "The area of the square is: " + (int) area + "cm² and the squarePerimeter is: "+ perimeter + " cm.";
-
-        //returns the result
-        return result;
-
+        return "The area of the square is: " + width*width + "cm²";
     }
 
+    private static String calcSquarePerimeter(int width) {
+        //calculate the Periemter of a Square
+        return "The perimeter of the square is: " + width*4 + "cm";
+    }
+
+    //1
     public static void main(String[] args) {
 
-        /*
-        //calcRectArea with different values
-        System.out.println(calcRectArea(20, 30));
-        System.out.println(calcRectArea(40, 50));
-        System.out.println(calcRectArea(10, 10));
-        System.out.println(calcRectArea(70, 100));
-         */
+        //2
+        System.out.println("\n2.");
+        int width = 5;
+        int height = 2;
+        int area = width*height;
+        System.out.println(area);
 
-        //calcRectArea with different values
-        System.out.println(calcRectArea());
+        //3
+        System.out.println("\n3.");
 
-        //calcSquareArea with different values
+        int width1 = 20;
+        int height1 = 30;
+        System.out.println(calcRectArea(width1, height1));
+
+        int width2 = 40;
+        int height2 = 50;
+        System.out.println(calcRectArea(width2, height2));
+
+        //4
+        System.out.println("\n4.");
+
+        int width3 = 4;
+        System.out.println(calcSquareArea(width3));
+
+        int width4 = 4;
+        System.out.println(calcSquarePerimeter(width4));
+
+        int width5 = 2;
+        System.out.println(calcSquarePerimeter(width5));
+
+        //5
+        System.out.println("\n5.");
+
+        System.out.println(calcRectArea(1, 1));
+        System.out.println(calcRectArea(2, 2));
+        System.out.println(calcRectArea(3, 3));
+        System.out.println(calcRectArea(4, 4));
+
+        System.out.println(calcSquareArea(1));
+        System.out.println(calcSquareArea(2));
+        System.out.println(calcSquareArea(3));
         System.out.println(calcSquareArea(4));
-        System.out.println(calcSquareArea(8));
-        System.out.println(calcSquareArea(12));
-        System.out.println(calcSquareArea(16));
+
+        System.out.println(calcSquarePerimeter(1));
+        System.out.println(calcSquarePerimeter(2));
+        System.out.println(calcSquarePerimeter(3));
+        System.out.println(calcSquarePerimeter(4));
+
+        //Bonus 1
+        System.out.println("\nBonus 1");
+
+        int[] widths = {14, 8, 11, 13};
+        int[] heights = {16, 14, 18, 19};
+
+        for(int i = 0; i < widths.length; i++){
+            System.out.println(calcRectArea(widths[i], heights[i]));
+        }
+
+        //Bonus 2
+
 
     }
 }
